@@ -1,4 +1,4 @@
-package wiwel.training.sfgpetclinic.model;
+package wiwiel.training.sfgpetclinic.model;
 
 public class Person {
     private String firstName;

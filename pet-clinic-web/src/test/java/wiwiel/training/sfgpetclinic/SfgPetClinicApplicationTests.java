@@ -1,4 +1,4 @@
-package wiwel.training.sfgpetclinic;
+package wiwiel.training.sfgpetclinic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

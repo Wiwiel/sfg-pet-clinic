@@ -6,8 +6,6 @@ import wiwiel.training.sfgpetclinic.model.Owner;
 import wiwiel.training.sfgpetclinic.model.Vet;
 import wiwiel.training.sfgpetclinic.services.OwnerService;
 import wiwiel.training.sfgpetclinic.services.VetService;
-import wiwiel.training.sfgpetclinic.services.map.OwnerServiceMap;
-import wiwiel.training.sfgpetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

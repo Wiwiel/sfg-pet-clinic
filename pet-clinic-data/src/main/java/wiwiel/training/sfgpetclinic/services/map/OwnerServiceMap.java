@@ -1,10 +1,12 @@
 package wiwiel.training.sfgpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import wiwiel.training.sfgpetclinic.model.Owner;
 import wiwiel.training.sfgpetclinic.services.OwnerService;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {

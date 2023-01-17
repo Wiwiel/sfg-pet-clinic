@@ -1,5 +1,6 @@
 package wiwiel.training.sfgpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import wiwiel.training.sfgpetclinic.model.Visit;
 import wiwiel.training.sfgpetclinic.services.VisitService;
@@ -7,6 +8,7 @@ import wiwiel.training.sfgpetclinic.services.VisitService;
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VisitServiceMap extends AbstractMapService<Visit, Long> implements VisitService {
     @Override
     public Set<Visit> findAll() {

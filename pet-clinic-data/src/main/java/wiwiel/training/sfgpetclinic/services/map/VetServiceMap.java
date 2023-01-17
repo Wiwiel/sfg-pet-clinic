@@ -1,5 +1,6 @@
 package wiwiel.training.sfgpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import wiwiel.training.sfgpetclinic.model.Speciality;
 import wiwiel.training.sfgpetclinic.model.Vet;
@@ -9,6 +10,7 @@ import wiwiel.training.sfgpetclinic.services.VetService;
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     private final SpecialityService specialityService;

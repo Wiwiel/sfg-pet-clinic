@@ -50,9 +50,4 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
     public void deleteById(Long id) {
         super.deleteById(id);
     }
-
-    @Override
-    public Vet findByLastName(String lastName) {
-        return null;
-    }
 }

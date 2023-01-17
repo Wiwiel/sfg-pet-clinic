@@ -13,14 +13,14 @@ import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
-public class OwnerSDJpaServices implements OwnerService {
+public class OwnerSDJpaService implements OwnerService {
 
     private final OwnerRepository ownerRepository;
     private final PetRepository petRepository;
     private final PetTypeRepository petTypeRepository;
 
-    public OwnerSDJpaServices(OwnerRepository ownerRepository, PetRepository petRepository,
-                              PetTypeRepository petTypeRepository) {
+    public OwnerSDJpaService(OwnerRepository ownerRepository, PetRepository petRepository,
+                             PetTypeRepository petTypeRepository) {
         this.ownerRepository = ownerRepository;
         this.petRepository = petRepository;
         this.petTypeRepository = petTypeRepository;
@@ -34,8 +34,8 @@ public class OwnerSDJpaServices implements OwnerService {
     }
 
     @Override
-    public Owner findById(Long id) {
-        return ownerRepository.findById(id).orElse(null);
+    public Owner findById(Long aLong) {
+        return ownerRepository.findById(aLong).orElse(null);
     }
 
     @Override
@@ -49,8 +49,8 @@ public class OwnerSDJpaServices implements OwnerService {
     }
 
     @Override
-    public void deleteById(Long id) {
-        ownerRepository.deleteById(id);
+    public void deleteById(Long aLong) {
+        ownerRepository.deleteById(aLong);
     }
 
     @Override

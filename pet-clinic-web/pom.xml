@@ -8,7 +8,7 @@
     <groupId>wiwel.training</groupId>
     <artifactId>pet-clinic-web</artifactId>
     <packaging>jar</packaging>
-    <name>petclinicweb Maven Webapp</name>
+    <name>petclinicweb</name>
 
     <properties>
         <!-- Web dependencies -->

@@ -7,16 +7,16 @@ import wiwiel.training.sfgpetclinic.model.Owner;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
-class OwnerServiceMapTest {
+class OwnerMapServiceTest {
 
-    OwnerServiceMap ownerServiceMap;
+    OwnerMapService ownerServiceMap;
 
     final Long ownerId = 1L;
     final String lastName = "Smith";
 
     @BeforeEach
     void setUp() {
-        ownerServiceMap = new OwnerServiceMap(new PetTypeServiceMap(), new PetServiceMap());
+        ownerServiceMap = new OwnerMapService(new PetTypeMapService(), new PetMapService());
         ownerServiceMap.save(Owner.builder().id(ownerId).lastName(lastName).build());
     }
 

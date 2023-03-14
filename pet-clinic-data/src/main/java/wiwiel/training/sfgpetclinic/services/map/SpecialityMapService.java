@@ -2,16 +2,17 @@ package wiwiel.training.sfgpetclinic.services.map;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
-import wiwiel.training.sfgpetclinic.model.PetType;
-import wiwiel.training.sfgpetclinic.services.PetTypeService;
+import wiwiel.training.sfgpetclinic.model.Speciality;
+import wiwiel.training.sfgpetclinic.services.SpecialityService;
 
 import java.util.Set;
 
 @Service
 @Profile({"default", "map"})
-public class PetTypeServiceMap extends AbstractMapService<PetType, Long> implements PetTypeService {
+public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialityService  {
+
     @Override
-    public Set<PetType> findAll() {
+    public Set<Speciality> findAll() {
         return super.findAll();
     }
 
@@ -21,17 +22,17 @@ public class PetTypeServiceMap extends AbstractMapService<PetType, Long> impleme
     }
 
     @Override
-    public void delete(PetType object) {
+    public void delete(Speciality object) {
         super.delete(object);
     }
 
     @Override
-    public PetType save(PetType object) {
+    public Speciality save(Speciality object) {
         return super.save(object);
     }
 
     @Override
-    public PetType findById(Long id) {
+    public Speciality findById(Long id) {
         return super.findById(id);
     }
 }

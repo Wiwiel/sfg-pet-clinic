@@ -15,6 +15,8 @@ import wiwiel.training.sfgpetclinic.services.OwnerService;
 import wiwiel.training.sfgpetclinic.services.PetService;
 import wiwiel.training.sfgpetclinic.services.PetTypeService;
 
+import java.beans.PropertyEditorSupport;
+import java.time.LocalDate;
 import java.util.Collection;
 
 @Controller
@@ -31,6 +33,18 @@ public class PetController {
         this.petService = petService;
         this.ownerService = ownerService;
         this.petTypeService = petTypeService;
+    }
+
+    @InitBinder
+    public void dataBinder(WebDataBinder dataBinder) {
+        dataBinder.setDisallowedFields("id");
+
+        dataBinder.registerCustomEditor(LocalDate.class, new PropertyEditorSupport() {
+            @Override
+            public void setAsText(String text) throws IllegalArgumentException{
+                setValue(LocalDate.parse(text));
+            }
+        });
     }
 
     @ModelAttribute("types")
@@ -81,13 +95,13 @@ public class PetController {
     }
 
     @PostMapping("/pets/{petId}/edit")
-    public String processUpdateForm(@Valid Pet pet, BindingResult result, Owner owner, Model model) {
+    public String processUpdateForm(@Valid Pet pet, BindingResult result, Owner owner, Model model, @PathVariable Long petId) {
         pet.setOwner(owner);
         if (result.hasErrors()) {
             model.addAttribute("pet", pet);
             return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
         } else {
-            owner.getPets().add(pet);
+            pet.setId(petId);
             petService.save(pet);
             return "redirect:/owners/" + owner.getId();
         }

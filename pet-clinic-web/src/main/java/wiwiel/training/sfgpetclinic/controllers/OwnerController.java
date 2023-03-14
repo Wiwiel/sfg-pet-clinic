@@ -1,5 +1,6 @@
 package wiwiel.training.sfgpetclinic.controllers;
 
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -9,7 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 import wiwiel.training.sfgpetclinic.model.Owner;
 import wiwiel.training.sfgpetclinic.services.OwnerService;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RequestMapping("/owners")

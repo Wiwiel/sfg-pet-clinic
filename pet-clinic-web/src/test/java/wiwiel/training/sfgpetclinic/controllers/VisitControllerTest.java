@@ -9,7 +9,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.ui.Model;
 import org.springframework.web.util.UriTemplate;
 import wiwiel.training.sfgpetclinic.model.Owner;
 import wiwiel.training.sfgpetclinic.model.Pet;
@@ -42,9 +41,6 @@ class VisitControllerTest {
 
     @Mock
     VisitService visitService;
-
-    @Mock
-    Model model;
 
     @InjectMocks
     VisitController visitController;

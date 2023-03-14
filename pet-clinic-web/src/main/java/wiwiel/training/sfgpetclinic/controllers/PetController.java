@@ -1,5 +1,6 @@
 package wiwiel.training.sfgpetclinic.controllers;
 
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -14,7 +15,6 @@ import wiwiel.training.sfgpetclinic.services.OwnerService;
 import wiwiel.training.sfgpetclinic.services.PetService;
 import wiwiel.training.sfgpetclinic.services.PetTypeService;
 
-import javax.validation.Valid;
 import java.util.Collection;
 
 @Controller

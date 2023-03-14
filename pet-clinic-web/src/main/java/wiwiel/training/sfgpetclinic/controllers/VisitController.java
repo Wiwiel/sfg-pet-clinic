@@ -1,5 +1,6 @@
 package wiwiel.training.sfgpetclinic.controllers;
 
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -10,7 +11,6 @@ import wiwiel.training.sfgpetclinic.model.Visit;
 import wiwiel.training.sfgpetclinic.services.PetService;
 import wiwiel.training.sfgpetclinic.services.VisitService;
 
-import javax.validation.Valid;
 import java.beans.PropertyEditorSupport;
 import java.time.LocalDate;
 

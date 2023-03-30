@@ -3,3 +3,5 @@
 # sfg-pet-clinic
 
 SFG Pet Clinic
+
+Was implemented during Spring Framework 5: Beginner to Guru course on Udemy with step-by-step instructions.
